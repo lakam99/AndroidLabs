@@ -2,4 +2,13 @@
 <resources>
     <string name="hello_message">こんにちは世界！</string>
     <string name="ButtonText">僕はボタンです</string>
+    <string name="GUILabel">僕のGUIを見てください</string>
+    <string name="click">ここにクリック</string>
+    <string name="check">これをこぎって！</string>
+    <string name="switchBtn">スイッチをつける / 切る</string>
+    <string name="toast_message">ここはもっと情報です</string>
+    <string name="hint">ここにタイプしてください</string>
+    <string name="switch_on">スイッチはオンです</string>
+    <string name="switch_off">スイッチはオフです</string>
+    <string name="undo">ウンドウ</string>
 </resources>
