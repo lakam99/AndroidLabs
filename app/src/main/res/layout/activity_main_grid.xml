@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rowCount="5"
+    android:columnCount="2">
+    <TextView
+        android:id="@+id/textview"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:text="@string/GUILabel"
+        android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/click_btn"
+        android:layout_gravity="fill"
+        android:text="@string/click" />
+
+    <CheckBox
+        android:layout_gravity="fill"
+        android:text="@string/check" />
+
+    <ImageButton
+        android:background="@null"
+        android:layout_gravity="fill"
+        android:src="@drawable/flag" />
+
+    <Switch
+        android:id="@+id/my_switch"
+        android:layout_gravity="fill"
+        android:text="@string/switchBtn" />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:inputType="textPersonName|textCapWords"/>
+
+    
+</GridLayout>
