@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="@string/GUILabel"
+        android:textSize="30dp"/>
+
+    <View android:id="@+id/strut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/click_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="fill"
+        android:layout_below="@+id/textview"
+        android:layout_alignEnd="@+id/strut"
+        android:layout_alignParentStart="true"
+        android:text="@string/click" />
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="fill"
+        android:layout_alignStart="@+id/strut"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textview"
+        android:layout_marginTop="10dp"
+        android:text="@string/check" />
+
+    <ImageButton
+        android:id="@+id/flag"
+        android:background="@null"
+        android:layout_gravity="fill"
+        android:src="@drawable/flag"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@+id/strut"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/click_btn"/>
+
+    <Switch
+        android:id="@+id/my_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/click_btn"
+        android:layout_alignStart="@+id/strut"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="33dp"
+        android:layout_gravity="fill"
+        android:text="@string/switchBtn" />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/flag"
+        android:layout_gravity="fill"
+        android:inputType="textPersonName|textCapWords"/>
+
+</RelativeLayout>
