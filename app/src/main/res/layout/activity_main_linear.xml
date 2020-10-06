@@ -5,63 +5,31 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/GUILabel"
-        android:textSize="30dp"/>
+        android:text="@string/email"/>
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/email"
+        android:inputType="textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:hint="@string/emailHint"/>
 
-        <Button
-            android:id="@+id/click_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/click" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/check" />
-    </LinearLayout>
-
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="1.0">
+        android:text="@string/password"/>
 
-        <ImageButton
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.75"
-            android:background="@null"
-            android:src="@drawable/flag" />
-
-        <Switch
-            android:id="@+id/my_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:text="@string/switchBtn" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/pass"
+        android:inputType="textPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint"
-            android:inputType="textPersonName|textCapWords"/>
-    </LinearLayout>
-
-
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"/>
 </LinearLayout>

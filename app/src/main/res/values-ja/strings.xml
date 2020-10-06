@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello_message">こんにちは世界！</string>
-    <string name="ButtonText">僕はボタンです</string>
-    <string name="GUILabel">僕のGUIを見てください</string>
-    <string name="click">ここにクリック</string>
-    <string name="check">これをこぎって！</string>
-    <string name="switchBtn">スイッチをつける / 切る</string>
-    <string name="toast_message">ここはもっと情報です</string>
-    <string name="hint">ここにタイプしてください</string>
-    <string name="switch_on">スイッチはオンです</string>
-    <string name="switch_off">スイッチはオフです</string>
-    <string name="undo">ウンドウ</string>
+    <string name="email">メールを入力してください</string>
+    <string name="emailHint">ここにEメールを入力してください</string>
+    <string name="password">パスワードを入力してください</string>
+    <string name="login">ログイン</string>
+    <string name="profile">あなたのプロフィール</string>
+    <string name="name">あなたの名前：</string>
+    <string name="nameHint">名前を入力してください</string>
+    <string name="urEmail">あなたのEメール：</string>
+    <string name="urEmailHint">Eメールを入力してください</string>
+    <string name="pic">あなたの写真：</string>
+    <string name="picHint">写真を撮るのために上のボタンをクリック</string>
 </resources>

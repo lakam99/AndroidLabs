@@ -2,9 +2,14 @@ package com.example.androidlabs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,16 +17,13 @@ import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
+    private EditText email;
+    private EditText pass;
+    private SharedPreferences preferences;
 
-    private boolean switch_state = false;
-    private Switch passed;
-    String snack_text = "NO TEXT";
-
-    public class Undo implements View.OnClickListener {
-        @Override
-        public void onClick(View s) {
-            passed.setChecked(!switch_state);
-        }
+    private void getPreferences() {
+        String prefsFile = "lab3_prefs.o";
+        preferences = getSharedPreferences(prefsFile, Context.MODE_PRIVATE);
     }
 
     @Override
@@ -29,25 +31,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_linear);
 
-        final Switch my_switch = findViewById(R.id.my_switch);
+        Button login = findViewById(R.id.login);
+        email = findViewById(R.id.email);
+        pass = findViewById(R.id.pass);
 
-        Button my_btn = findViewById(R.id.click_btn);
+        getPreferences();
+        email.setText(preferences.getString("email", ""));
 
-        my_btn.setOnClickListener((e)->{
-            Toast.makeText(MainActivity.this, getResources().getString(R.string.toast_message),
-                    Toast.LENGTH_LONG).show();
+        login.setOnClickListener((e)->{
+            Intent next = new Intent(MainActivity.this, ProfileActivity.class);
+            next.putExtra("email", email.getText().toString());
+            startActivity(next);
         });
+    }
 
-        my_switch.setOnCheckedChangeListener((eventClicked, newState)->{
-            switch_state = newState;
-            passed = my_switch;
-            if (newState) {
-                snack_text = getResources().getString(R.string.switch_on);
-            } else {
-                snack_text = getResources().getString(R.string.switch_off);
-            }
-            Snackbar.make(my_switch, snack_text, Snackbar.LENGTH_LONG).
-                    setAction(getResources().getString(R.string.undo), new Undo()).show();
-        });
+    @Override
+    protected void onPause() {
+        super.onPause();
+        getPreferences();
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("email", email.getText().toString());
+        editor.apply();
     }
 }
